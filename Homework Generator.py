@@ -1,4 +1,4 @@
-def expand_ranges(input_str):
+def extract_numbers(input_str):
     input_str = input_str.replace('all', '').replace('#', '')
     result = []
     for part in input_str.split(','):
@@ -18,7 +18,7 @@ page_n         = input("Enter the page number: ")
 user_num_input = input("Enter problem numbers separated by commas and dashes: ")
 
 # Split the input string into a list of integers
-problem_nums = expand_ranges(user_num_input)
+problem_nums = extract_numbers(user_num_input)
 
 # Convert the list to a string for printing
 problem_nums_str = ', '.join(map(str, problem_nums))
